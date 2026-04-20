@@ -4,82 +4,179 @@
   <meta charset="UTF-8" />
   <title>Jairo Mendes Abreu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: #1e1e1e;
       color: #ddd;
     }
+
     header {
-      padding: 40px;
+      padding: 50px 20px 30px;
       text-align: center;
     }
+
     h1 {
       color: #ff9800;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+      font-size: 2.2em;
     }
+
+    header p {
+      margin-top: 0;
+      opacity: 0.9;
+    }
+
     section {
       max-width: 900px;
       margin: auto;
       padding: 20px;
     }
-    .app {
-      background: #2a2a2a;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 8px;
+
+    .about {
+      text-align: center;
+      font-size: 1.05em;
+      opacity: 0.9;
+      margin-bottom: 40px;
     }
-    a {
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.6em;
+    }
+
+    .app-card {
+      background: #2a2a2a;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .app-content {
+      padding: 24px;
+    }
+
+    .app-content h3 {
+      margin-top: 0;
       color: #4fc3f7;
+      font-size: 1.3em;
+    }
+
+    .screenshots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .screenshots a {
+      display: inline-block;
+    }
+
+    .screenshots img {
+      width: 100%;
+      max-width: 180px;
+      border-radius: 6px;
+      opacity: 0.9;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .screenshots img:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 18px;
+      color: #ff9800;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .cta:hover {
+      text-decoration: underline;
+    }
+
+    .coming-soon {
+      opacity: 0.6;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    a {
+      color: inherit;
       text-decoration: none;
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Jairo Mendes Abreu</h1>
-  <p>Desktop Software Developer • Retro & Tooling</p>
-</header>
+  <header>
+    <h1>Jairo Mendes Abreu</h1>
+    <p>Desktop Software Developer • Retro & Tooling</p>
+  </header>
 
-<section class="about">
-  <p>
-    I develop desktop applications focused on automation, usability and
-    maintainable architectures, with a strong interest in retro gaming
-    tools and productivity software.
-  </p>
-</section>
+  <section class="about">
+    <p>
+      I develop desktop applications focused on automation, usability and
+      maintainable architectures, with a strong interest in retro gaming
+      tools and productivity software.
+    </p>
+  </section>
 
-<section>
-  <h2>Apps</h2>
+  <section>
+    <h2>Apps</h2>
 
-  <a class="app-card"
-     href="https://github.com/JairoMendesAbreu/mame-playlist-builder"
-     target="_blank">
+    <div class="app-card">
+      <div class="app-content">
 
-    <div class="app-content">
-      <h3>MAME Playlist Builder</h3>
-      <p>
-        Desktop tool for creating and managing RetroArch playlists for MAME,
-        featuring automatic icon generation, thumbnail integration and
-        a safe backup/rollback system.
-      </p>
+        <h3>MAME Playlist Builder</h3>
 
-      <div class="screenshots">
-        <img src="assets/images/splash.png" alt="Splash Screen">
-        <img src="assets/images/mainform.png" alt="Main Interface">
-        <img src="assets/images/about.png" alt="About Screen">
+        <p>
+          Desktop tool for creating and managing RetroArch playlists for MAME,
+          featuring automatic icon generation, thumbnail integration and
+          a safe backup/rollback system.
+        </p>
+
+        <div class="screenshots">
+          <a href="assets/images/splash.png" target="_blank">
+            <img src="assets/images/splash.png" alt="Splash Screen">
+          </a>
+
+          <a href="assets/images/mainform.png" target="_blank">
+            <img src="assets/images/mainform.png" alt="Main Interface">
+          </a>
+
+          <a href="assets/images/about.png" target="_blank">
+            <img src="assets/images/about.png" alt="About Screen">
+          </a>
+        </div>
+
+        <a
+          class="cta"
+          href="https://github.com/JairoMendesAbreu/mame-playlist-builder"
+          target="_blank">
+          View project on GitHub →
+        </a>
+
       </div>
-
-      <span class="cta">View project on GitHub →</span>
     </div>
 
-  </a>
+    <p class="coming-soon">More projects coming soon.</p>
 
-  <p class="coming-soon">More projects coming soon.</p>
-
-</section>
+  </section>
 
 </body>
 </html>
